@@ -25,25 +25,25 @@ const apartment = {
 	floor: 3,
 }
 
-let realitkaDispozice = document.querySelector ('.realitkaDispozice')
-realitkaDispozice = disposition
-
-let rent = 28000
-let water = 1000
-let energy = 2500
-let services = 560
 
 
-let cistyNajem = document.querySelector('cistyNajem')
-cistyNajem.innerHTML = rent - water - energy - services
+document.body.innerHTML = '<p>Dispozice bytu: ' + apartment.disposition + '</p>';
+document.body.innerHTML = '<p>Čistý nájem: ' + apartment.rent + '</p>';
+document.body.innerHTML = '<p>Výměra bytu: ' + apartment.area.floorage + apartment.area.units + '</p>'
+
+const city = apartment.city
+const district = apartment.district
+
+document.body.innerHTML = city + ' ' + district
+
+apartment.status = "taken"
+document.body.innerHTML = "<p>Stav inzerátu: " + apartment.status + "</p>"
+
 //Pomocí tečkové notace vypište do stránky dispozici bytu.
 //Vypište do stránky čistý nájem bez poplatků.
 //Vypište do stránky celý objekt představující výměru bytu.
 //Pomocí destrukturování si do separátních proměnných uložte město a městskou část. Vypište je do stránky.
 //Změnte stav inzerátu z 'free' na 'taken'.
-
-
-
 
 
 
